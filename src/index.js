@@ -2,8 +2,8 @@ import path from 'path';
 import * as fs from 'node:fs';
 
 export default function genDiff(filepath1, filepath2) {
-  const filePath1 = path.resolve('../', '__fixtures__/file1.json');
-  const filePath2 = path.resolve('../', '__fixtures__/file2.json');
+  const filePath1 = path.resolve('../', filepath1);
+  const filePath2 = path.resolve('../', filepath2);
 
   const data1 = JSON.parse(fs.readFileSync(filePath1, 'utf-8'));
   const data2 = JSON.parse(fs.readFileSync(filePath2, 'utf-8'));
